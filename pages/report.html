@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../main.css">
+    <style>
+     
+       
+        
+    </style>
+    <title>Employee Report</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar">
+            <li><a class="active" href="#"><span class="style3val"> 3VAL</span></a></li>
+            <div class="rightSideNav">
+            <li  ><a href="../index.html"><button class="button-17" role="button">Logout</button></a>
+            </li>
+        </div>
+        </ul>
+
+    </nav>
+    </header>
+    <section class="welcomePageBackground2">
+      <div class="containerWelcome2">
+      <h2 >Please select an employee to show the evaluation result</h2>
+      <select name="" id="employeeNameSelect2" class="empolyeeName" onchange="changeSelectForReport()">
+        <option value="the employee" >employee name</option>
+        <option value="Hamza">Hamza</option>
+        <option value="Majd">Majd</option>
+        <option value="Jameel">Jameel</option>
+        <option value="Rahaf">Rahaf</option>
+      </select>
+      <img class="welcome2"  src="images/reportphoto.png">
+
+
+      <button class="button-556" id="reportstart" onclick="showResult()">show the evaluation</button>
+
+ 
+      </div>
+
+    </section>
+  </section>
+      <section class="employeeFormEval"id="reportfir" >
+        <h2>Employee Evaluation Results</h2>
+        <form action="" class="evaluationForm" >
+          <div class="personal-section">
+            <h3 class="criteriaHeader">personal Critieria</h3>
+            <ol>
+              <li id="q-0">The employee personality and charisma is truly magnetic.</li>
+              <div class="radioBox" id="r0">
+             
+                <label for="" id="l0">Excellent</label>
+              </div>
+
+  
+              <li id="q-1">The employee is a person of charisma and influence.</li>
+              <div class="radioBox" id="r1">
+                
+                <label for="" id="l1">excellent</label>
+              </div>
+              
+              <li id="q-2">
+                The employee is a very soft spoken person and never lose his
+                temper.
+              </li>
+              <div class="radioBox" id="r2">
+                <label for="" id="l2">excellent</label>
+              </div>
+
+            </ol>
+            
+          
+          </div>
+       
+          <div class="professionalSection">
+            <h3 class="criteriaHeader">professional Critieria</h3>
+            <ol>
+              <li id="q-3">The employee’s dress and personal appearance</li>
+              <div class="radioBox" id="r3">
+               
+                <label for="" id="l3">excellent</label>
+              </div>
+             
+  
+              <li id="q-4">the employee is accountable for her tasks</li>
+              <div class="radioBox" id="r4">
+               
+                <label for="" id="l4">excellent</label>
+              </div>
+
+              <li id="q-5">
+                The employee’s behavior according to the company’s ethical code.
+              </li>
+              <div class="radioBox" id="r5">
+               
+                <label for="" id="l5">excellent</label>
+              </div>
+            </ol>
+         
+          </div>
+         
+          <div class="technicalSection">
+            <h3 class="criteriaHeader">technical Critieria</h3>
+            <ol>
+              <li id="q-6">
+                the employee demonstrated the highest level of understanding of
+                the most complex design and implementation issues at every stage
+                of development.
+              </li>
+              <div class="radioBox" id="r6">
+                <label for="" id="l6">excellent</label>
+              </div>
+
+  
+              <li id="q-7">
+                the employee has an exceptional way of finding things and get them
+                improved.
+              </li>
+              <div class="radioBox" id="r7"> 
+                
+                <label for="" id="l7">excellent</label>
+              </div>
+
+              <li id="q-8">
+                the employee understands complicated issues, even when outside of
+                his direct area of expertise.
+              </li>
+              <div class="radioBox" id="r8">
+               
+                <label for="" id="l8">excellent</label>
+              </div>
+              
+
+            </ol>   
+          
+          </div>
+       
+        
+      </form>
+    </section>
+    <section class="containerRecomend" id="recomendationSystem" >
+        <div class="recImgAndText"><h2>Recommendations</h2><img src="images/recommendation-icon.JPG"></div>
+        <p id="reco">  we advice you with the following based on your evaluation so you keep your company as its best!!</p>
+        <div id="recommendArea">
+         
+
+        </div>
+    </section>
+    <footer>CopyRight 3Val</footer>
+    <!-- <script src="../script.js">
+
+    </script> -->
+
+<script>
+
+
+
+// ....................................quesion id
+
+const question1=document.getElementById("q-0")
+const question2=document.getElementById("q-1")
+const question3=document.getElementById("q-2")
+const question4=document.getElementById("q-3")
+const question5=document.getElementById("q-4")
+const question6=document.getElementById("q-5")
+const question7=document.getElementById("q-6")
+const question8=document.getElementById("q-7")
+const question9=document.getElementById("q-8")
+
+const workerName=document.getElementById("employeeNameSelect2")
+
+const btnShowEval=document.getElementById("reportstart")
+
+// change to empolyee name
+
+function changeSelectForReport(){
+btnShowEval.style.display='block'
+question1.textContent=`${workerName.value } personality and charisma is truly magnetic.`
+  question2.textContent = `${workerName.value } is a person of charisma and influence.`;
+    question3.textContent = `${workerName.value } is a very soft spoken person and never lose his temper.`;
+   question4.textContent = `${workerName.value } dress and personal appearance.`;
+    question5.textContent = `${workerName.value } is accountable for her tasks.`;
+   question6.textContent = `${workerName.value } behavior according to the company’s ethical code.`;
+    question7.textContent = `${workerName.value }  the employee demonstrated the highest level of understanding of the most complex design and implementation issues at every stage of development.`;
+   question8.textContent = `${workerName.value } has an exceptional way of finding things and get them improved.`;
+   question9.textContent = `${workerName.value } understands complicated issues, even when outside of his direct area of expertise.`;
+}
+
+
+//show form
+const formRes=document.getElementById("reportfir")
+const recommendSystem= document.getElementById("recomendationSystem")
+function showResult(){
+formRes.style.display='flex'
+recommendSystem.style.display= 'flex'
+var userResult = localStorage.getItem("userResult");
+ userResult = JSON.parse(userResult);
+console.log(userResult)
+
+let l0 = document.getElementById('l0')
+let l1 = document.getElementById('l1')
+let l2 = document.getElementById('l2')
+let l3 = document.getElementById('l3')
+let l4 = document.getElementById('l4')
+let l5 = document.getElementById('l5')
+let l6 = document.getElementById('l6')
+let l7 = document.getElementById('l7')
+let l8 = document.getElementById('l8')
+
+let r0 = document.getElementById('r0')
+let r1 = document.getElementById('r1')
+let r2 = document.getElementById('r2')
+let r3 = document.getElementById('r3')
+let r4 = document.getElementById('r4')
+let r5 = document.getElementById('r5')
+let r6 = document.getElementById('r6')
+let r7 = document.getElementById('r7')
+let r8 = document.getElementById('r8')
+
+for (let i = 0; i < 9; i++) {
+     document.getElementById(`l${i}`).textContent = userResult.result[i];
+        console.log(document.getElementById(`l${i}`).textContent)
+        if (document.getElementById(`l${i}`).textContent === 'excellent') {
+            document.getElementById(`l${i}`).style.color="green"            
+            document.getElementById(`r${i}`).style.borderColor = 'green'
+        } else if (document.getElementById(`l${i}`).textContent === 'good') {
+            document.getElementById(`l${i}`).style.color='rgba(188, 188, 10, 0.915)'
+            document.getElementById(`r${i}`).style.borderColor = 'rgba(188, 188, 10, 0.915)'
+        } else {
+            document.getElementById(`l${i}`).style.color='red'
+            document.getElementById(`r${i}`).style.borderColor = 'red'
+        }
+    }
+
+  
+
+
+
+
+const recommendText=document.getElementById("recommendArea")
+
+  console.log(l3.textContent)
+
+  // console.log(recommendText.textContent=" more charisma")
+
+    if ((l0.textContent ==="poor")) {
+       
+        recommendText.innerHTML+= ` About personality and charisma: you must be more charisma.<br><br>`;
+    }
+  
+    if ((l1.textContent === 'poor')) {
+       
+      recommendText.innerHTML+=` About charisma and influence: you must be more influence. <br><br>`;
+    }
+    if ((l2.textContent === 'poor')) {
+       
+      recommendText.innerHTML+=` About soft spoken: you must control temper. <br><br>`;
+    }
+    if ((l3.textContent === 'poor')) {
+     
+      recommendText.innerHTML+= ` About dress and personal appearance: you must work on appearance. <br><br>`;
+    }
+    if ((l4.textContent === 'poor')) {
+      
+      recommendText.innerHTML+= `About responsibilty for tasks: you must be accountable. <br><br>`;
+    }
+    if ((l5.textContent === 'poor')) {
+       
+      recommendText.innerHTML+= `About behavior according to the company’s ethical code: you must respect ethical code. <br><br>`;
+    }
+    if ((l6.textContent === 'poor')) {
+     
+      recommendText.innerHTML+=` About understanding of the most complex design: you must be more understanding of the most complex design. <br><br>` ;
+    }
+    if ((l7.textContent === 'poor')) {
+       
+      recommendText.innerHTML+= ` About finding things and get them improved: you must be creative.  <br><br>`;
+    }
+    if ((l8.textContent === 'poor')) {
+      
+      recommendText.innerHTML+= `About understanding complicated issues: you must think out of the box.   <br>`;
+    }
+    
+ if(l0.textContent ==="poor"|| l1.textContent ==="poor "|| l2.textContent ==="poor"
+  || l3.textContent ==="poor"|| l4.textContent ==="poor "|| l5.textContent ==="poor" 
+   || l6.textContent ==="poor"|| l7.textContent ==="poor "|| l8.textContent ==="poor")
+
+    { 
+      
+      document.getElementById("reco").innerHTML= `<b><span style="color:red  ;font-size: larger;"> ${ workerName.value}</span></b>,we advice you with the following based on your evaluation so you keep your company as its best!!  `;
+   
+    }
+
+    
+
+    
+
+
+}
+
+
+
+
+
+ 
+
+
+</script>
+
+
+  </body>
+</html>

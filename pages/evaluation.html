@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body onload=" changeName()" >
+    <header>
+      <nav>
+        <ul class="navbar">
+            <li><a class="active" href="#"><span class="style3val"> 3VAL</span></a></li>
+            <div class="rightSideNav">
+            <li ><a href="report.html"><button class="button-17" role="button">Evaluation Results</button></a>
+            </li>
+            <li  ><a href="../index.html"><button class="button-17" role="button">Logout</button></a>
+            </li>
+        </div>
+        </ul>
+
+
+
+    </nav>
+    </header>
+<section class="welcomePageBackground">
+    <div class="containerWelcome">
+
+      <h1 id="welcomeMessage" > Welcome username</h1> 
+
+     
+    
+    <section class="employeeSelection">
+      <h2>please select an employee to start<br> the evaluation</h2>    
+      <p class="evaluationText">
+        Please note that you will be filling a questionnaire<br> that contains 3
+        sections to evaluate your employee <br>(personal, professional, technical)
+        and then we will <br>recommend you advices based on your answers.
+      </p>
+      <select name="" id="employeeNameSelect" class="empolyeeName" onchange="y()">
+        <option value="the employee" >Employee Name</option>
+        <option value="Hamza">Hamza</option>
+        <option value="Majd">Majd</option>
+        <option value="Jameel">Jameel</option>
+        <option value="Rahaf">Rahaf</option>
+      </select>
+
+      <img class="welcome"  src="images/welome.png">
+      <button class="evaluationBtn button-55" id="evalstart" onclick="z()" >start the evaluation</button>
+</div>
+    </section>
+</section>
+
+<section class="employeeFormEval" id="evalfir" >
+  <h2>Employee Evaluation </h2>
+  <form action="" class="evaluationForm" onsubmit="a()">
+    <div class="personal-section">
+      <h3 class="criteriaHeader">personal Criteria  <img id="showMore" onclick="showOne()" src="images/showmore.png" > </h3>
+      <ol  id="p1_text">
+        <li id="q-0" >The employee personality and charisma is truly magnetic.</li>
+        <div class="radioBox" >
+          <input class="radioStyle" type="radio" name="personal-first" value="excellent" id="p-f-e" />
+          <label for="p-f-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="personal-first" value="good" id="p-f-g" />
+          <label for="p-f-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="personal-first" id="p-f-p" value="poor"  required/>
+          <label for="p-f-p">poor</label>
+        </div>
+
+        <li id="q-1">The employee is a person of charisma and influence.</li>
+        <div class="radioBox">
+          <input type="radio" name="personal-second" value="excellent" id="p-s-e" />
+          <label for="p-s-e" >excellent</label>
+        </div>
+        <div class="radioBox"> 
+          <input type="radio" name="personal-second" id="p-s-g" value="good" />
+          <label for="p-s-g" >good</label>
+        </div> 
+        <div class="radioBox">
+          <input type="radio" name="personal-second" id="p-s-p" value="poor" required/>
+          <label for="p-s-p">poor</label>
+        </div>
+        <li id="q-2">
+          The employee is a very soft spoken person and never lose his
+          temper.
+        </li>
+        <div class="radioBox">
+          <input type="radio" name="personal-third" value="excellent" id="p-t-e" />
+          <label for="p-t-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="personal-third" value="good" id="p-t-g" />
+          <label for="p-t-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="personal-third" value="poor" id="p-t-p" required/>
+          <label for="p-t-p">poor</label>
+        </div>
+    
+      </ol>
+    
+    </div>
+    
+    <div class="professionalSection">
+      <h3 class="criteriaHeader">professional Criteria  <img id="showMore" onclick="showTwo()" src="images/showmore.png" ></h3>
+      <ol id="p2_text">
+        <li id="q-3">The employee’s dress and personal appearance</li>
+        <div class="radioBox">
+          <input type="radio" name="professional-first" id="pro-f-e" value="excellent" />
+          <label for="pro-f-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-first" value="good" id="pro-f-g" />
+          <label for="pro-f-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-first" value="poor" id="pro-f-p" required/>
+          <label for="pro-f-p">poor</label>
+        </div>
+
+        <li id="q-4">the employee is accountable for his tasks</li>
+        <div class="radioBox">
+          <input type="radio" name="professional-second" value="excellent" id="pro-s-e" />
+          <label for="pro-s-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-second" value="good" id="pro-s-g" />
+          <label for="pro-s-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-second" value="poor" id="pro-s-p" required/>
+          <label for="pro-s-p">poor</label>
+        </div>
+        <li id="q-5">
+          The employee’s behavior according to the company’s ethical code.
+        </li>
+        <div class="radioBox">
+          <input type="radio" name="professional-third" value="excellent" id="pro-t-e" />
+          <label for="pro-t-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-third" value="good" id="pro-t-g" />
+          <label for="pro-t-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="professional-third" value="poor" id="pro-t-p" required/>
+          <label for="pro-t-p">poor</label>
+        </div>
+      </ol>
+ 
+    </div>
+   
+    <div class="technicalSection">
+      <h3 class="criteriaHeader">technical Criteria <img id="showMore" onclick="showThree()" src="images/showmore.png"  ></h3>
+      <ol id="p3_text">
+        <li id="q-6">
+          the employee demonstrated the highest level of understanding of
+          the most complex design and implementation issues at every stage
+          of development.
+        </li>
+        <div class="radioBox">
+          <input type="radio" name="technical-first" value="excellent"  id="t-f-e" />
+          <label for="t-f-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="technical-first" value="good" id="t-f-g" />
+          <label for="t-f-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="technical-first" value="poor" id="t-f-p" required/>
+          <label for="t-f-p">poor</label>
+        </div>
+
+        <li id="q-7">
+          the employee has an exceptional way of finding things and get them
+          improved.
+        </li>
+        <div class="radioBox">
+          <input type="radio" name="technical-second" value="excellent" id="t-s-e" />
+          <label for="t-s-e">excellent</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="technical-second" value="good" id="t-s-g" />
+          <label for="t-s-g">good</label>
+        </div>
+        <div class="radioBox">
+          <input type="radio" name="technical-second" id="t-s-p" value="poor" required/>
+          <label for="t-s-p">poor</label>
+        </div>
+        <li id="q-8">
+          the employee understands complicated issues, even when outside of
+          his direct area of expertise.
+        </li>
+        <div class="radioBox">
+          <input type="radio" name="technical-third" value="excellent" id="t-t-e" />
+          <label for="t-t-e">excellent</label>
+        </div>
+        
+        <div class="radioBox">
+          <input type="radio" name="technical-third" value="good" id="t-t-g" />
+          <label for="t-t-g">good</label>
+        </div> 
+         <div class="radioBox">
+          <input type="radio" name="technical-third" id="t-t-p"  value="poor" required/>
+          <label for="t-t-p">poor</label>
+        </div> 
+      </ol>   
+      
+    </div>
+ 
+    <div class="center">
+      <input class="submitEvaluationForm2" type="submit" value="Submit"  />
+    </div>
+</form>
+</section>
+
+    <footer>CopyRight &copy; 3Val</footer>
+
+
+    <!-- <script src="../script.js">
+      
+const selection = document.getElementById("employeeNameSelect");
+
+
+selection.addEventListener('change', (event) => {
+
+
+});
+
+    </script> -->
+  
+<script>
+
+  const userName=document.getElementById("welcomeMessage")
+
+  function changeName(){
+    userName.textContent=`Welcome ${ sessionStorage.name }`
+  }
+ 
+  const workerName=document.getElementById("employeeNameSelect")
+  const btnEvaluation=document.getElementById("evalstart")
+
+// ....................................quesion id
+const question1=document.getElementById("q-0")
+const question2=document.getElementById("q-1")
+const question3=document.getElementById("q-2")
+const question4=document.getElementById("q-3")
+const question5=document.getElementById("q-4")
+const question6=document.getElementById("q-5")
+const question7=document.getElementById("q-6")
+const question8=document.getElementById("q-7")
+const question9=document.getElementById("q-8")
+
+
+
+  function y(){
+    // show evaluation button
+  btnEvaluation.style.display='block'
+ // change employee name
+  question1.textContent=`${workerName.value } personality and charisma is truly magnetic.`
+  question2.textContent = `${workerName.value} is a person of charisma and influence.`;
+    question3.textContent = `${workerName.value} is a very soft spoken person and never lose his temper.`;
+   question4.textContent = `${workerName.value} dress and personal appearance.`;
+    question5.textContent = `${workerName.value} is accountable for her tasks.`;
+   question6.textContent = `${workerName.value} behavior according to the company’s ethical code.`;
+    question7.textContent = `${workerName.value}  the employee demonstrated the highest level of understanding of the most complex design and implementation issues at every stage of development.`;
+   question8.textContent = `${workerName.value} has an exceptional way of finding things and get them improved.`;
+   question9.textContent = `${workerName.value} understands complicated issues, even when outside of his direct area of expertise.`;
+
+  }
+function a(){
+var q1Res=document.querySelector("input[name='personal-first']:checked").value;
+var q2Res=document.querySelector('input[name="personal-second"]:checked').value;
+var q3Res=document.querySelector('input[name="personal-third"]:checked').value;
+var q4Res=document.querySelector('input[name="professional-first"]:checked').value;
+var q5Res=document.querySelector('input[name="professional-second"]:checked').value;
+var q6Res=document.querySelector('input[name="professional-third"]:checked').value;
+var q7Res=document.querySelector('input[name="technical-first"]:checked').value;
+var q8Res=document.querySelector('input[name="technical-second"]:checked').value;
+var q9Res=document.querySelector('input[name="technical-third"]:checked').value;
+
+let answers = {
+    user: workerName.value,
+    result: [
+    q1Res,
+    q2Res,
+    q3Res,
+    q4Res,
+    q5Res,
+    q6Res,
+    q7Res,
+    q8Res,
+      q9Res,
+],
+  };
+
+  localStorage.setItem("userResult", JSON.stringify(answers));
+
+
+//   answers = JSON.parse(localStorage.getItem('answers')) || [];
+// answers.push ({
+//    empolyee: workerName.value,
+//     result: {
+//       Q0: q1Res,
+//       Q1: q2Res,
+//       Q2: q3Res,
+//       Q3: q4Res,
+//       Q4: q5Res,
+//       Q5: q6Res,
+//       Q6: q7Res,
+//       Q7: q8Res,
+//       Q8: q9Res,
+// }})
+   
+ 
+//   localStorage.setItem("userResult", JSON.stringify(answers));
+
+
+
+}
+
+
+
+const showEval=document.getElementById("evalfir")
+function z(){
+  showEval.style.display="flex"
+}
+function showOne() {
+    const p1Text = document.getElementById("p1_text");
+    p1Text.style.display = 'block';
+}
+
+function showTwo() {
+    const p2Text = document.getElementById("p2_text");
+    p2Text.style.display = 'block';
+}
+
+function showThree() {
+    const p3Text = document.getElementById("p3_text");
+    p3Text.style.display = 'block';
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+  </body>
+</html>
+
+
+
